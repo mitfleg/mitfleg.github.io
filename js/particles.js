@@ -88,7 +88,7 @@
             posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
         }
         target.x = posx;
-        target.y = posy+100;
+        target.y = posy;
     }
 
     function scrollCheck() {
@@ -154,6 +154,7 @@
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p.closest[i].x, p.closest[i].y);
             ctx.strokeStyle = 'rgba(248,124,86,'+ p.active+')';
+            //ctx.strokeStyle = 'rgba(248,0,0,'+ p.active+')'
             ctx.stroke();
         }
     }
@@ -173,6 +174,7 @@
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
             ctx.fillStyle = 'rgba(248,124,86,'+ _this.active+')';
+            //ctx.fillStyle = 'rgba(248,0,0,'+ _this.active+')';
             ctx.fill();
         };
     }

@@ -16,106 +16,123 @@
     }, false);
 })();
 $(document).ready(function(){
-        $(".menu-right").on("click","a", function (event) {
-            //отменяем стандартную обработку нажатия по ссылке
-            event.preventDefault();
-            //забираем идентификатор бока с атрибута href
-            var id  = $(this).attr('href'),
-            //узнаем высоту от начала страницы до блока на который ссылается якорь
-                top = $(id).offset().top;
-            //анимируем переход на расстояние - top за 1500 мс
-            jQuery('body,html').animate({scrollTop: top}, 1500);
-        });
-            $(window).scroll(function(){
-                
-                if($(window).scrollTop()>1500){
-                    $(function() {
-                        $.each($('.up1'), function(i, el) {
-                          setTimeout(function() {
-                            $(el).attr('style:','opacity:1');
-                            $(el).addClass("animate__animated animate__fadeInUp");
-                          }, 100 + (i * 100));
-                      
-                        });
-                      });
-                }
-                if($(window).scrollTop()>2500){
-                    $(function() {
-                        $.each($('.up2'), function(i, el) {
-                          setTimeout(function() {
-                            $(el).attr('style:','opacity:1');
-                            $(el).addClass("animate__animated animate__fadeInUp");
-                          }, 100 + (i * 100));
-                      
-                        });
-                      });
-                }
-                if($(window).scrollTop()>500){
-                    $(function() {
-                        $.each($('.up3'), function(i, el) {
-                          setTimeout(function() {
-                            $(el).attr('style:','opacity:1');
-                            $(el).addClass("animate__animated animate__fadeInUp");
-                          }, 100 + (i * 100));
-                      
-                        });
-                      });
-                }
-                if($(window).scrollTop()>3300){
-                    $(function() {
-                        $.each($('.up4'), function(i, el) {
-                          setTimeout(function() {
-                            $(el).attr('style:','opacity:1');
-                            $(el).addClass("animate__animated animate__fadeInUp");
-                          }, 100 + (i * 100));
-                      
-                        });
-                      });
-                }
-                if($(window).scrollTop()>4000){
-                    $(function() {
-                        $.each($('.up5'), function(i, el) {
-                          setTimeout(function() {
-                            $(el).attr('style:','opacity:1');
-                            $(el).addClass("animate__animated animate__fadeInUp");
-                          }, 100 + (i * 100));
-                      
-                        });
-                      });
-                }
-                if($(window).scrollTop()>4800){
-                    $(function() {
-                        $.each($('.up6'), function(i, el) {
-                          setTimeout(function() {
-                            $(el).attr('style:','opacity:1');
-                            $(el).addClass("animate__animated animate__fadeInUp");
-                          }, 100 + (i * 100));
-                      
-                        });
-                      });
-                }
-            });
-           
-});
-$(function(){
-    $.fn.scrollToTop=function(){
-      $(this).hide().removeAttr("href");
-      if($(window).scrollTop()!="0"){
-          $(this).fadeIn("slow")
-    }
-    var scrollDiv=$(this);
-    $(window).scroll(function(){
-      if($(window).scrollTop()=="0"){
-      $(scrollDiv).fadeOut("slow")
-      }else{
-      $(scrollDiv).fadeIn("slow")
-    }
-    });
-      $(this).click(function(){
-        $("html, body").animate({scrollTop:0},"slow")
-      })
-    }
-  });
-$(function() {$("#toTop").scrollToTop();});
+      $(".menu-right").on("click","a", function (event) {
+          //отменяем стандартную обработку нажатия по ссылке
+          event.preventDefault();
+          //забираем идентификатор бока с атрибута href
+          var id  = $(this).attr('href'),
+          //узнаем высоту от начала страницы до блока на который ссылается якорь
+              top = $(id).offset().top;
+          //анимируем переход на расстояние - top за 1500 мс
+          jQuery('body,html').animate({scrollTop: top}, 1500);
+      });
+      $(function() {
 
-    
+          $(window).scroll(function() {
+          if($(this).scrollTop() != 0) {
+          $('#toTop').fadeIn();
+          } else {
+          $('#toTop').fadeOut();
+          }
+          });
+          $('#toTop').click(function() {
+          $('body,html').animate({scrollTop:0},800);
+          });
+           
+          });
+      $(".btn-link").click(function(){
+          if ($('.btn-link').hasClass('collapsed')){
+              $('.btn-link').text('Скрыть');
+          }
+          else{
+              $('.btn-link').text('Далее');
+          }
+      });
+      $(".burger").click(function(){
+          $(".burger").toggleClass('active_burg')
+          $(".nav").toggleClass('active')
+          $(".programm").toggleClass('active_swipe')
+          if($('.burger').hasClass('active_burg')){
+              $('html, body').css('overflow', 'hidden');
+          }
+          else{
+              $('html, body').css('overflow', '')
+          }
+          $(".link-main").toggleClass('link')
+          $(".link").click(function(){
+              $(".programm").toggleClass('active_swipe')
+              $(".burger").toggleClass('active_burg')
+              $(".nav").toggleClass('active')
+              $('html, body').css('overflow', '')
+          });
+      });   
+      $(window).scroll(function(){
+                
+        if($(window).scrollTop()>1500){
+            $(function() {
+                $.each($('.up1'), function(i, el) {
+                  setTimeout(function() {
+                    $(el).attr('style:','opacity:1');
+                    $(el).addClass("animate__animated animate__fadeInUp");
+                  }, 100 + (i * 100));
+              
+                });
+              });
+        }
+        if($(window).scrollTop()>2500){
+            $(function() {
+                $.each($('.up2'), function(i, el) {
+                  setTimeout(function() {
+                    $(el).attr('style:','opacity:1');
+                    $(el).addClass("animate__animated animate__fadeInUp");
+                  }, 100 + (i * 100));
+              
+                });
+              });
+        }
+        if($(window).scrollTop()>500){
+            $(function() {
+                $.each($('.up3'), function(i, el) {
+                  setTimeout(function() {
+                    $(el).attr('style:','opacity:1');
+                    $(el).addClass("animate__animated animate__fadeInUp");
+                  }, 100 + (i * 100));
+              
+                });
+              });
+        }
+        if($(window).scrollTop()>3300){
+            $(function() {
+                $.each($('.up4'), function(i, el) {
+                  setTimeout(function() {
+                    $(el).attr('style:','opacity:1');
+                    $(el).addClass("animate__animated animate__fadeInUp");
+                  }, 100 + (i * 100));
+              
+                });
+              });
+        }
+        if($(window).scrollTop()>4000){
+            $(function() {
+                $.each($('.up5'), function(i, el) {
+                  setTimeout(function() {
+                    $(el).attr('style:','opacity:1');
+                    $(el).addClass("animate__animated animate__fadeInUp");
+                  }, 100 + (i * 100));
+              
+                });
+              });
+        }
+        if($(window).scrollTop()>4800){
+            $(function() {
+                $.each($('.up6'), function(i, el) {
+                  setTimeout(function() {
+                    $(el).attr('style:','opacity:1');
+                    $(el).addClass("animate__animated animate__fadeInUp");
+                  }, 100 + (i * 100));
+              
+                });
+              });
+        }
+    });     
+});
