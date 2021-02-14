@@ -65,8 +65,7 @@ $(document).ready(function(){
                 $(".nav").toggleClass('active')
                 $('html, body').css('overflow', '')
             });
-        }); 
-         
+        });      
 });
 
     
