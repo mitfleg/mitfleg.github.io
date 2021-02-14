@@ -26,6 +26,20 @@ $(document).ready(function(){
             //анимируем переход на расстояние - top за 1500 мс
             jQuery('body,html').animate({scrollTop: top}, 1500);
         });
+        $(function() {
+ 
+            $(window).scroll(function() {
+            if($(this).scrollTop() != 0) {
+            $('#toTop').fadeIn();
+            } else {
+            $('#toTop').fadeOut();
+            }
+            });
+            $('#toTop').click(function() {
+            $('body,html').animate({scrollTop:0},800);
+            });
+             
+            });
         $(".btn-link").click(function(){
             if ($('.btn-link').hasClass('collapsed')){
                 $('.btn-link').text('Скрыть');
@@ -46,9 +60,12 @@ $(document).ready(function(){
             }
             $(".link-main").toggleClass('link')
             $(".link").click(function(){
+                $(".programm").toggleClass('active_swipe')
+                $(".burger").toggleClass('active_burg')
+                $(".nav").toggleClass('active')
                 $('html, body').css('overflow', '')
             });
-        });   
+        }); 
          
 });
 
