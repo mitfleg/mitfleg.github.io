@@ -6,27 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Программа подбора и пилотирования инновационных решений в Нижегородской области</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon.ico">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@300;500;700&display=swap"
         rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/css/particles.css"> -->
+    <link rel="stylesheet" href="/css/particles.css">
     <link rel="stylesheet" href="/fonts/fonts.css">
     <link rel="stylesheet" href="/css/style.min.css">
-    <!-- <script>
-        if (window.devicePixelRatio !== 1) { // Костыль для определения иных устройств, с коэффициентом отличным от 1		
-            var dpt = window.devicePixelRatio;
-            var widthM = window.screen.width * dpt;
-            var widthH = window.screen.height * dpt;
-            document.write('<meta name="viewport" content="width=' + widthM + ', height=' + widthH + '">');
-        }
-    </script> -->
 </head>
 
 <body>
@@ -52,8 +42,7 @@
                         <div class="menu-right d-flex">
                             <a href="#programm" class="link-main">Программа</a>
                             <a href="#choice" class="link-main">Возможности</a>
-                            <button class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal">Регистрация</button>
+                            <a href="#feedback"><button class="btn btn-primary">Регистрация</button></a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +75,7 @@
                         <img src="/icons/raketa.png" alt="НОЦ" class="img_raketa">
                     </a>
                     <a href="https://startup.mts.ru" target="_blank">
-                        <img src="/icons/StartUp.webp" alt="StartUp">
+                        <img src="/icons/StartUp.png" alt="StartUp">
                     </a>
                 </div>
             </div>
@@ -287,7 +276,7 @@
             </div>
         </div>
     </section>
-    <section class="feedback up5">
+    <section class="feedback up5" id="feedback">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -295,17 +284,26 @@
                         Попробуйте использовать наш <br> инструмент, это бесплатно
                     </h1>
                 </div>
-                <div class="col-md-6 descr">
-                    Если вы хотите стать пилотной площадкой и тестировать у себя инновационные <br>
-                    технологии
+                <div class="col-md-6">
+                    <div class=" descr">
+                        Если вы хотите стать пилотной площадкой и тестировать у себя инновационные <br>
+                        технологии
+                    </div>
+                    <div class="send">
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">оставить
+                            заявку</button>
+                    </div>
                 </div>
-                <div class="col-md-6 descr">
-                    Если у вас есть инновационное технологическое решение и вы хотите предоставить его для тестирования
-                    на пилотных площадках
-                </div>
-                <div class="col">
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">оставить
-                        заявку</button>
+                <div class="col-md-6">
+                    <div class="descr">
+                        Если у вас есть инновационное технологическое решение и вы хотите предоставить его для
+                        тестирования
+                        на пилотных площадках
+                    </div>
+                    <div class="send">
+                        <button class="btn btn-primary light" data-toggle="modal" data-target="#exampleModal2">оставить
+                            заявку</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -320,7 +318,7 @@
                     <img src="/img/Anton.jpg" alt="" class="Anton">
                     <h3>Антон Зюзин <br> руководитель центра MTS StartUp Hub в Нижнем Новгороде</h3>
                     <a href="mailto:azyuzin@mts.ru">azyuzin@mts.ru</a>
-                    <a href="tel:89200738383">+7(920)073-83-83</a>
+                    <a href="tel:89100570898">+7(910)057-08-98</a>
                 </div>
                 <div class="col-md-6 contacts up6">
                     <img src="/img/Dmitry.jpg" alt="">
@@ -333,7 +331,7 @@
     </footer>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -344,7 +342,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="http://24navo.com/2/t/b0.php" method="POST" class="needs-validation" novalidate>
+                    <form action="#" method="POST" class="needs-validation" novalidate>
                         <input type="text" class="form-control" name="Name" placeholder="Название" required>
                         <input type="email" class="form-control" name="email" placeholder="E-mail" required>
                         <input type="text" class="form-control" name="Input" placeholder="Контактное лицо" required>
@@ -354,14 +352,62 @@
                             required></textarea>
 
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Отправить</button>
+                            <div class="input-block">
+                                <div class="input__wrapper">
+                                    <input name="file" type="file" name="file" id="input__file1"
+                                        class="input input__file count-file1" multiple>
+                                    <label for="input__file1" class="input__file-button btn-blue">
+                                        <span class="input__file-button-text btn-blue count-text1">Загрузить файл</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-blue">Отправить</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Modal-2 -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Заполните анкету</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST" class="needs-validation" novalidate>
+                        <input type="text" class="form-control" name="Name" placeholder="Название" required>
+                        <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+                        <input type="text" class="form-control" name="Input" placeholder="Контактное лицо" required>
+                        <input type="tel" class="form-control" name="Phone" placeholder="Телефон" required>
+                        <textarea name="message" class="form-control" id="" cols="30" rows="10"
+                            placeholder="Опишите ваше инновационное решение" required></textarea>
+                        <textarea name="message" class="form-control" id="" cols="30" rows="10"
+                            placeholder="Кто может быть пилотной площадкой для тестирования вашего решения?"
+                            required></textarea>
 
+                        <div class="modal-footer">
+                            <div class="input-block">
+                                <div class="input__wrapper">
+                                    <input name="file" type="file" name="file" id="input__file2"
+                                        class="input input__file count-file2" multiple>
+                                    <label for="input__file2" class="input__file-button btn-red">
+                                        <span class="input__file-button-text btn-red count-text2">Загрузить файл</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-red">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
@@ -371,6 +417,9 @@
     <script src="js/rAF.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
+    <script>
+
+    </script>
 </body>
 
 </html>

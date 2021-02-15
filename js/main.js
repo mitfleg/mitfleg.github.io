@@ -134,5 +134,39 @@ $(document).ready(function(){
                 });
               });
         }
-    });     
+    }); 
+    let inputs = document.querySelectorAll('.count-file1');
+    let inputs2 = document.querySelectorAll('.count-file2');
+        Array.prototype.forEach.call(inputs, function (input) {
+            let label = input.nextElementSibling,
+                labelVal = label.querySelector('.count-text1').innerText;
+
+            input.addEventListener('change', function (e) {
+                let countFiles = '';
+                if (this.files && this.files.length >= 1)
+                    countFiles = this.files.length;
+
+                if (countFiles)
+                    label.querySelector('.count-text1').innerText = 'Выбрано файлов: ' +
+                    countFiles;
+                else
+                    label.querySelector('.count-text1').innerText = labelVal;
+            });
+        });
+        Array.prototype.forEach.call(inputs2, function (input) {
+          let label = input.nextElementSibling,
+              labelVal = label.querySelector('.count-text2').innerText;
+
+          input.addEventListener('change', function (e) {
+              let countFiles = '';
+              if (this.files && this.files.length >= 1)
+                  countFiles = this.files.length;
+
+              if (countFiles)
+                  label.querySelector('.count-text2').innerText = 'Выбрано файлов: ' +
+                  countFiles;
+              else
+                  label.querySelector('.count-text2').innerText = labelVal;
+          });
+      });
 });

@@ -1,5 +1,9 @@
 @font-face {
-    font-family: 'Arial';
-    src: url("arial.ttf") format("truetype");
+    font-family: "Arial";
+    src: url("Arial.eot");
+    src: url("Arial.eot?#iefix")format("embedded-opentype"),
+        url("Arial.woff") format("woff"),
+        url("Arial.ttf") format("truetype");
+    font-style: normal;
     font-weight: 400;
 }
